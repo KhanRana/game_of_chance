@@ -1,0 +1,33 @@
+ 
+ @import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700");
+ 
+ /* global settings */
+ * body {
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+}
+
+/* Headings */
+h1, h2, h3 {
+font-family: 'Abril Fatface', serif;
+}
+
+/* header */
+#logo {
+    width: 100%;
+    text-emphasis: centre;
+}
+
+
+/* footer */
+.footer {
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
