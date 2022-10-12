@@ -2,32 +2,196 @@
  @import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700");
  
  /* global settings */
- * body {
+ * {
+    margin: 0;
+    border: none;
+    padding: 0;
+ }
+ 
+ body {
     background-color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     width: 100%;
     text-align: center;
+    color: rgba(4, 96, 79, 0.906);
 }
 
 /* Headings */
 h1, h2, h3 {
 font-family: 'Abril Fatface', serif;
+color: rgba(3, 58, 48, 0.906);
 }
 
 /* header */
 #logo {
+    background-color: rgba(4, 96, 79, 0.906);
+    color: #ffffff;
     width: 100%;
     text-emphasis: centre;
+    /* color: #000000; */
+    font-size: 2.5rem;
+    padding-top: 0;
+    font-weight: 80;
 }
 
+/* play area */
+#display-area {
+    /* background-color: aqua; */
+    padding-top: 20px;
+    width: 70%;
+    height: 300px;
+    margin-left: 8%;
+    position: relative;
+}
+
+/* display area */
+.choice {
+    background-color: #ffffff;
+    height: 100%;
+    width: 300px;
+    text-align: center;
+    display: inline-block;
+    border: 1px black solid;
+    /* margin-left: auto; */
+}
+
+/* playing area to choose from given options */
+#play-area{
+    height: 100px;
+    position: relative;
+    margin-top: 20px;
+}
+
+#player-image {
+    margin-left: 18%;
+}
+
+#player-choice {
+    position: relative;
+    margin: 20px auto;
+    padding-top: 10px;
+}
+/* buttons */
+#buttons {
+    position: absolute;
+    bottom: 0;
+    left: 38%;
+    text-align: center;
+
+}
+/* choose an option from the buttons */
+.choice-btn {
+    font-size: 50px;
+    color: rgba(4, 96, 79, 0.906);
+    background: none;
+    border: none;
+    padding-right: 20px;
+}
+
+/* scores */
+#result {
+    width: 60%;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    padding-top: 15px;
+}
+.scores{
+    display: inline-block;
+    padding: 5px;
+    text-align: center;
+    width: 60;
+}
+
+/* winner annoucement */
+#win-announce{
+    padding-bottom: 100px;
+}
 
 /* footer */
 .footer {
-    background-color: #ffffff;
+    background-color: rgba(4, 96, 79, 0.906);
+    color: #ffffff;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
+    height: 100px;
+}
+
+/* media queries for responsive design */
+@media screen and (max-width:1100px) {
+
+    #logo {
+        width: 100%;
+    }
+    #display-area {
+        width: 100%;
+        display: block;
+        height:fit-content;
+        /* margin-left: 8%; */
+    }
+    #player-image {
+        margin-left: 0%;
+    }
+    #npc-image {
+        margin-left: 0%;
+    }
+
+    #play-area {
+        top: 0;
+    }
+
+    #buttons{
+        margin-top: 20px;
+        left: 30%;
+    }
+}
+
+@media screen and (max-width:607px){
+    #result {
+        width: 60%;
+        position: relative;
+        margin: 0px auto;
+        text-align: center;
+        padding-top: 0px;
+    }
+}
+
+@media screen and (max-width:520px) {
+    #buttons{
+        margin-top: 0px;
+        left: 5%;
+    }
+}
+
+@media screen and (max-width:384px) {
+
+    #play-area{
+        padding-top: 0;
+        height: 120px;
+    }
+    #buttons{
+        padding-bottom: 10px;
+        margin-top: 0px;
+        left: 10%;
+    }
+    .choice-btn {
+        font-size: 30px;
+    }
+
+    #win-announce{
+        height: 20px;
+        top:0;
+    }
+}
+
+@media screen and (max-width:172px) {
+
+  #play-area{
+        padding-top: 0;
+        height: 150px;
+    }
 }

@@ -9,12 +9,22 @@
 </head>
 <body>
     <header>
-        <h1 id="logo"><img src="assets/images/logo.jpeg" alt="logo"></h1>
+        <h1 id="logo">Rock, Paper, Scissors, Lizard, Spock</h1>
     </header>
+
+    <section id="display-area">
+        <div class="choice" id="player-image">
+            <img src="assets/images/RockPaperScissorsLizardSpock.jpg" alt="The lizard spock expansioin">
+        </div>
+
+        <div class="choice" id="npc-image">
+            <img src="assets/images/RockPaperScissorsLizardSpock.jpg" alt="The lizard spock expansioin">
+        </div>
+    </section>
+
     <section id="play-area">
-        <div class="choice">You Entered</div>
-        <div class="choice">NPC Entered</div>
-        <div class="buttons">
+        <div id="player-choice"><p>Player Choice</p></div>   
+        <div id="buttons">
             <button class="choice-btn btn-big ">
                 <i class="fa-solid fa-hand-back-fist"></i>
             </button>
@@ -33,12 +43,15 @@
         </div>
     </section>
 
-    <section class="result">
-        <div class="score-area">
+    <section id="result">
+        <div id="score-area">
             <p class="scores">Your Score <span id="your-score">0</span></p>
-            <p class="scores">Computer Score <span id="npc-score">0</span></p>
+            <p class="scores">NPC Score <span id="npc-score">0</span></p>
         </div>
-        <div class="winner">
+    </section>
+    
+    <section id="win-announce">
+        <div class="win">
             <p class="win"><span id="winner">x</span></p>
         </div>
     </section>
