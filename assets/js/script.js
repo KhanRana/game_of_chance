@@ -6,11 +6,17 @@ document.addEventListener("DOMContentLoaded", function(){
         button.addEventListener("click", function(){
             let btn = this.getAttribute("data-type");
             choice(btn, "your-image")[0];
-            incrementScore();
 
+            let yourChoice = choice(btn, "your-image")[1];
+         
             let ncp = npcChoice(choices);
             console.log(ncp);
             choice(ncp, "npc-image")[0];
+
+            let myChoice = choice(ncp, "npc-image")[1];
+            console.log(myChoice);
+
+            checkAnswer(yourChoice, myChoice)
         })  
 }});
 
@@ -40,21 +46,23 @@ function npcChoice(choice){
     return choice[Math.floor(Math.random() * choices.length)];
 }
 
-function checkAnswer(){
+function checkAnswer(playerChoice, nonPlayer){
     // check for a tie round
-    if (npcChoice === playerChoice) {
-        alert(`You both chose ${npcChoice} - Its a tie`);
+    if (nonPlayer === playerChoice) {
+        alert(`You both chose ${nonPlayer} - Its a tie`);
     }
-    else if ((npcChoice === "rock") && (playerChoice === "scissors" || playerChoice === "lizard")
-    || ((npcChoice === "paper") && (playerChoice === "rock" || playerChoice === "spock")) 
-    || ((npcChoice === "scissors") && (playerChoice === "paper" || playerChoice === "lizard"))
-    || ((npcChoice === "lizrad") && (playerChoice === "paper") || playerChoice === "spock")
-    || ((npcChoice === "spock") && (playerChoice === "rock" || playerChoice === "scissors"))) {
+    else if ((nonPlayer === "rock") && (playerChoice === "scissors" || playerChoice === "lizard")
+    || ((nonPlayer === "paper") && (playerChoice === "rock" || playerChoice === "spock")) 
+    || ((nonPlayer === "scissors") && (playerChoice === "paper" || playerChoice === "lizard"))
+    || ((nonPlayer === "lizrad") && (playerChoice === "paper") || playerChoice === "spock")
+    || ((nonPlayer === "spock") && (playerChoice === "rock" || playerChoice === "scissors"))) {
 
-        alert (`I chose ${npcChoice}, so I win! ${npcChoice} beats ${playerChoice}`);
+        alert (`I chose ${nonPlayer}, so I win! ${nonPlayer} beats ${playerChoice}`);
+        incrementNPCScore()
     }
     else {
-        alert(`I chose ${npcChoice}, so you win! ${playerChoice} beats ${npcChoice}`);
+        alert(`I chose ${nonPlayer}, so you win! ${playerChoice} beats ${nonPlayer}`);
+        incrementScore();
     }
 }
 
