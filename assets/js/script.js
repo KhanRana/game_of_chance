@@ -48,8 +48,10 @@ function npcChoice(choice){
 
 function checkAnswer(playerChoice, nonPlayer){
     // check for a tie round
+    message = ``;
     if (nonPlayer === playerChoice) {
-        alert(`You both chose ${nonPlayer} - Its a tie`);
+        message = `We both chose ${nonPlayer} - Its a tie`;
+        document.getElementById("winner").textContent = message;
     }
     else if ((nonPlayer === "rock") && (playerChoice === "scissors" || playerChoice === "lizard")
     || ((nonPlayer === "paper") && (playerChoice === "rock" || playerChoice === "spock")) 
@@ -57,12 +59,15 @@ function checkAnswer(playerChoice, nonPlayer){
     || ((nonPlayer === "lizrad") && (playerChoice === "paper") || playerChoice === "spock")
     || ((nonPlayer === "spock") && (playerChoice === "rock" || playerChoice === "scissors"))) {
 
-        alert (`I chose ${nonPlayer}, so I win! ${nonPlayer} beats ${playerChoice}`);
+        message = `I chose ${nonPlayer}, so I win! ${nonPlayer} beats ${playerChoice}`;
+        document.getElementById("winner").textContent = message;
         incrementNPCScore()
     }
     else {
-        alert(`I chose ${nonPlayer}, so you win! ${playerChoice} beats ${nonPlayer}`);
+        message = `I chose ${nonPlayer}, so you win! ${playerChoice} beats ${nonPlayer}`;
+        document.getElementById("winner").textContent = message;
         incrementScore();
+
     }
 }
 
@@ -82,4 +87,3 @@ function incrementNPCScore() {
     document.getElementById("npc-score").textContent = ++newScore;
 
 }
-
