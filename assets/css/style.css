@@ -48,7 +48,7 @@ color: rgba(3, 58, 48, 0.906);
 /* display area */
 .choice {
     background-color: #ffffff;
-    height: 100%;
+    height: fit-content;
     width: 300px;
     text-align: center;
     display: inline-block;
@@ -56,15 +56,21 @@ color: rgba(3, 58, 48, 0.906);
     /* margin-left: auto; */
 }
 
+image {
+    height: auto;
+    width: 250px;
+    display: block;
+    margin: auto;
+}
+#player-image {
+    margin-left: 18%;
+}
+
 /* playing area to choose from given options */
 #play-area{
     height: 100px;
     position: relative;
     margin-top: 20px;
-}
-
-#player-image {
-    margin-left: 18%;
 }
 
 #player-choice {
@@ -87,6 +93,11 @@ color: rgba(3, 58, 48, 0.906);
     background: none;
     border: none;
     padding-right: 20px;
+}
+
+button:hover {
+    font-size: 200%;
+    color: #808080;
 }
 
 /* scores */

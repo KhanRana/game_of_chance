@@ -14,30 +14,32 @@
 
     <section id="display-area">
         <div class="choice" id="player-image">
+            <h3>You</h3>
             <img id="your-image" src="assets/images/RockPaperScissorsLizardSpock.jpg" alt="The lizard spock expansioin">
         </div>
 
-        <div class="choice" id="npc-image">
-            <img src="assets/images/RockPaperScissorsLizardSpock.jpg" alt="The lizard spock expansioin">
+        <div class="choice">
+            <h3>NPC</h3>
+            <img id="npc-image" src="assets/images/RockPaperScissorsLizardSpock.jpg" alt="The lizard spock expansioin">
         </div>
     </section>
 
     <section id="play-area">
         <div id="player-choice"><p>Player Choice</p></div>   
         <div id="buttons">
-            <button class="choice-btn btn-big ">
+            <button class="choice-btn btn-big" data-type="rock">
                 <i class="fa-solid fa-hand-back-fist"></i>
             </button>
-            <button class="choice-btn btn-big">
+            <button class="choice-btn btn-big" data-type="paper">
                 <i class="fa-sharp fa-solid fa-hand"></i>
             </button>
-            <button class="choice-btn btn-big">
+            <button class="choice-btn btn-big" data-type="scissors">
                 <i class="fa-solid fa-hand-scissors"></i>
             </button>
-            <button class="choice-btn btn-big">
+            <button class="choice-btn btn-big" data-type="lizard">
                 <i class="fa-solid fa-hand-lizard"></i>
             </button>
-            <button class="choice-btn">
+            <button class="choice-btn btn-big" data-type="spock">
                 <i class="fa-solid fa-hand-spock"></i>
             </button>
         </div>
