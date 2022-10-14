@@ -22,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 })
 
+/**
+ * make a choice and returns image and choice
+ */
 function choice(btn, id) { 
     let img = document.getElementById(id);
     if (btn === "rock"){
@@ -48,9 +51,12 @@ function npcChoice(choice){
     return choice[Math.floor(Math.random() * choices.length)];
 }
 
+/**
+ * check choices and display who wins the round
+ */
 function checkAnswer(playerChoice, nonPlayer){
     // check for a tie round
-    message = ``;
+    let message = ``;
     if (nonPlayer === playerChoice) {
         message = `We both chose ${nonPlayer} - Its a tie`;
         document.getElementById("round-winner").textContent = message;
@@ -92,6 +98,9 @@ function incrementNPCScore() {
 
 }
 
+/**
+ * function to track the winner
+ */
 function winner (){
     if (parseInt(document.getElementById("your-score").innerText) > 
     parseInt(document.getElementById("npc-score").innerText))
