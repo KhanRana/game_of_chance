@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function(){
             winner();
         })  
     }
+
+    resetScores();
 })
 
 /**
@@ -114,4 +116,17 @@ function winner (){
     else {
         document.getElementById("winner").textContent = "Its draw!";
     }
+}
+
+/**
+ * reset the score
+ */
+function resetScores(){
+    let reset = document.getElementById("reset");
+    reset.addEventListener("click", function (){
+        document.getElementById("your-score").textContent = 0;
+        document.getElementById("npc-score").textContent = 0;
+        document.getElementById("round-winner").textContent = '';
+        document.getElementById("winner").textContent = '';
+    })
 }

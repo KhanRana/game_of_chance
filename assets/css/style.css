@@ -107,11 +107,21 @@ button:hover {
     text-align: center;
     padding-top: 15px;
 }
-.scores{
+.scores {
     display: inline-block;
     padding: 5px;
     text-align: center;
     width: 60%;
+}
+
+#reset{
+    display: inline-block;
+    padding: 5px;
+    text-align: center;
+    width: 60%;
+    font-size: 1.2rem;
+    color:firebrick;
+    background: none;
 }
 
 /* winner annoucement */
