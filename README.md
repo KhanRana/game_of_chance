@@ -1,108 +1,97 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome KhanRana,
+![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# Rock, Paper, Scissors, Lizard
+The game is an expansion on the game Rock, Paper, Scissors. Each player picks a variable and reveals it at the same time. The game was originally created by Sam Kass with Karen Bryla. The winner is the one who defeats the others. In a tie, the process is repeated until a winner is found.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![game_page](https://github.com/KhanRana/lizard_spock_expansion/blob/main/assets/images/readme-report/game-page.png)
 
-## Gitpod Reminders
+## Features
+In this section, different parts of the website are breifly shown with and describe with images.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Navigation Bar 
+Featured on all three pages, the full responsive navigation bar includes links to the Logo, Home page, About Us, Gallery, Membership page and is identical in each page to allow for easy navigation.
 
-`python3 -m http.server`
+![players]()
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+### The banner imager
+The banner includes a photograph with text overlay to with a motivation quotation to keep training to get the results that they want.
+This section introduces the user to the club website with beautiful smily animation to grab their attention by welcoming them.
+![landing_image](https://github.com/KhanRana/community_boxing_club/blob/main/assets/media/banner.png)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Motivation/reason section
+The club motivation/reasons section will allow the user to see the benefits of boxing, as well as the benefits of exercise.
+This should encourage the user to consider running as their form of exercise.
+![motivation](https://github.com/KhanRana/community_boxing_club/blob/main/assets/media/reasons.png?raw=true)
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+### Group Class times
+This section will allow the user to see exactly when the meetups will happen, where they will be located and how long the run will be in kilometers.
+This section will be updated as these times change to keep the user up to date.
+![class_times](https://github.com/KhanRana/community_boxing_club/blob/main/assets/media/class_times.png)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+##About Us
+This section describes clubs ambition and who they are motivating others to get fit and strong.
+![about_us_page](https://github.com/KhanRana/community_boxing_club/blob/main/assets/media/about.png)
 
-To log into the Heroku toolbelt CLI:
+## Gallery
+The gallery will provide the user with supporting photos and videos to see them in training. 
+This section is valuable to the user as they will be able to easily identify the types of events the organisation puts together.
+![gallery_page](https://github.com/KhanRana/community_boxing_club/blob/main/assets/media/gallery.png)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## The Membership Page
+This page will allow the user to get signed up to Love Running to start their running journey with the community. 
+The user will be able specify if they would like to take part in road, trail or both types of running. The user will 
+be asked to submit their full name, email address, age and reasons for joining the club.
+![membership_page](https://github.com/KhanRana/community_boxing_club/blob/main/assets/media/membership.png)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Features Left to Implement
+Further details such as address & telephone number can be added to the footer if the website goes to a club owner.
+There is always room for improvement, and there is number of other feature that can be added: the one eature I did 
+have was fighter or list of ameature fighter on the website.
 
-------
+## Testing
+The project is responsive to different screen sizes including mobile and tablets.
 
-## Release History
+### Validator Testing
+- HTML
+No errors were returned when passing through the official W3C validator
+- CSS
+No errors were found when passing through the official (Jigsaw) validator
+![index_valid](https://github.com/KhanRana/community_boxing_club/blob/main/assets/media/index_pass.png)
+![gallery_valid](https://github.com/KhanRana/community_boxing_club/blob/main/assets/media/gallery_validated.png)
+![about_valid](https://github.com/KhanRana/community_boxing_club/blob/main/assets/media/about_pass.png)
+![member_valid](https://github.com/KhanRana/community_boxing_club/blob/main/assets/media/membership_validated.png)
+![css_valid](https://github.com/KhanRana/community_boxing_club/blob/main/assets/media/css_validated.png)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+The website membership form is also validated for type.
+[type_valid](https://github.com/KhanRana/community_boxing_club/blob/main/assets/media/type_check.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Finally, the website is also tested by the light house and returned oustanding results.
+![light_house_report](https://github.com/KhanRana/community_boxing_club/blob/main/assets/media/lighthouse_report.png)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- Fixed Bugs
+There was an error when submitting the membership.html. It turns out we cannot 'required' to a drop down select. 
+When the 'required' was removed from the select, html returned no errors.
+Footer was moving up the screen on about.html in mobile and tablet view. I have fixed is by sticking it and moving it to the bottom using '100vh'.
+Previous small screen bug fix created issue for larger screen use, which now has been fixed by using body 100vh and positioning footer relatively.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Deployment
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+In the GitHub repository, navigate to the Settings tab and Pages
+From the build and deploymet > from a source > deployment from a branch, main , root > save.
+Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+The live link can be found here - ![](https://khanrana.github.io/community_boxing_club/)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Credits
+- Content
+The text for the Home page was taken from healthline.come
+Instructions on how to implement form validation on the Membership Form was taught in the program
+The icons in the footer were taken from Font Awesome
+The website is inpired by various tutorials and websites, including but not limited to the code institute.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+- Media
+All photos are taken from open source website [UpSplash](https://unsplash.com/images).
+All videos are taken from open source website [Pexels](https://www.pexels.com/videos/)
