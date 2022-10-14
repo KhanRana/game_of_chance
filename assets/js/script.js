@@ -15,7 +15,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
             let myChoice = choice(ncp, "npc-image")[1]; //get npc choice 
 
-            checkAnswer(yourChoice, myChoice);//check choices and winners           
+            checkAnswer(yourChoice, myChoice);//check choices and winners 
+            
+            winner();
         })  
     }
 })
@@ -68,6 +70,9 @@ function checkAnswer(playerChoice, nonPlayer){
         document.getElementById("round-winner").textContent = message;
         incrementScore();
     }
+
+
+
 }
 
 /**
@@ -85,4 +90,19 @@ function incrementNPCScore() {
     let newScore = parseInt(document.getElementById("npc-score").innerText);
     document.getElementById("npc-score").textContent = ++newScore;
 
+}
+
+function winner (){
+    if (parseInt(document.getElementById("your-score").innerText) > 
+    parseInt(document.getElementById("npc-score").innerText))
+    {
+        document.getElementById("winner").textContent = "You are winning te Game!";
+    }
+    else if (parseInt(document.getElementById("npc-score").innerText) > 
+    parseInt(document.getElementById("your-score").innerText)){
+        document.getElementById("winner").textContent = "I am winning the Game!";
+    }
+    else {
+        document.getElementById("winner").textContent = "Its draw!";
+    }
 }
