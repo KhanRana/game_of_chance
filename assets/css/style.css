@@ -29,7 +29,6 @@ color: rgba(3, 58, 48, 0.906);
     color: #ffffff;
     width: 100%;
     text-emphasis: centre;
-    /* color: #000000; */
     font-size: 2.5rem;
     padding-top: 0;
     font-weight: 80;
@@ -112,7 +111,7 @@ button:hover {
     display: inline-block;
     padding: 5px;
     text-align: center;
-    width: 60;
+    width: 60%;
 }
 
 /* winner annoucement */
@@ -196,7 +195,7 @@ button:hover {
     }
 }
 
-@media screen and (max-width:384px) {
+@media screen and (max-width:390px) {
 
     #play-area{
         padding-top: 0;
