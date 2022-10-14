@@ -122,6 +122,7 @@ button:hover {
 
 #winner {
     font-size: 1.5rem;
+    color: black;
 }
 
 #round-winner {
@@ -184,6 +185,15 @@ button:hover {
         margin-top: 0px;
         left: 5%;
     }
+
+    .footer{
+        height: 120px;
+    }
+    #win-announce{
+        height: 20px;
+        top:0;
+        padding-bottom: 150px;
+    }
 }
 
 @media screen and (max-width:384px) {
@@ -206,6 +216,23 @@ button:hover {
         top:0;
         padding-bottom: 200px;
     }
+
+    #winner {
+        padding-bottom: 200px;
+    }
+    .footer{
+        height: 200px;
+    }
+}
+
+@media screen and (max-width:230px) {
+    .footer {
+        height: 250px;
+    }
+
+    #win-announce {
+        padding-bottom: 300px;
+    }
 }
 
 @media screen and (max-width:172px) {
@@ -213,5 +240,14 @@ button:hover {
   #play-area{
         padding-top: 0;
         height: 150px;
+    }
+
+    #win-announce {
+        padding-bottom: 450px;
+    }
+
+    .footer
+    {
+        height: 350px;
     }
 }

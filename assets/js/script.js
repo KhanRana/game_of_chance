@@ -96,7 +96,7 @@ function winner (){
     if (parseInt(document.getElementById("your-score").innerText) > 
     parseInt(document.getElementById("npc-score").innerText))
     {
-        document.getElementById("winner").textContent = "You are winning te Game!";
+        document.getElementById("winner").textContent = "You are winning the Game!";
     }
     else if (parseInt(document.getElementById("npc-score").innerText) > 
     parseInt(document.getElementById("your-score").innerText)){

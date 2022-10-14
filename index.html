@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lizard and Spock Expansion game of choice">
     <title>Lizard Spock Expansion</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -14,12 +15,12 @@
 
     <section id="display-area">
         <div class="choice" id="player-image">
-            <h3>You</h3>
+            <h2>You</h2>
             <img id="your-image" src="assets/images/RockPaperScissorsLizardSpock.jpg" alt="The lizard spock expansioin">
         </div>
 
         <div class="choice">
-            <h3>NPC</h3>
+            <h2>NPC</h2>
             <img id="npc-image" src="assets/images/RockPaperScissorsLizardSpock.jpg" alt="The lizard spock expansioin">
         </div>
     </section>
@@ -27,19 +28,19 @@
     <section id="play-area">
         <div id="player-choice"><p>Player Choice</p></div>   
         <div id="buttons">
-            <button class="choice-btn btn-big" data-type="rock">
+            <button class="choice-btn btn-big" data-type="rock" aria-label="select rock">
                 <i class="fa-solid fa-hand-back-fist"></i>
             </button>
-            <button class="choice-btn btn-big" data-type="paper">
+            <button class="choice-btn btn-big" data-type="paper" aria-label="select paper">
                 <i class="fa-sharp fa-solid fa-hand"></i>
             </button>
-            <button class="choice-btn btn-big" data-type="scissors">
+            <button class="choice-btn btn-big" data-type="scissors" aria-label="select scissors">
                 <i class="fa-solid fa-hand-scissors"></i>
             </button>
-            <button class="choice-btn btn-big" data-type="lizard">
+            <button class="choice-btn btn-big" data-type="lizard" aria-label="select lizard">
                 <i class="fa-solid fa-hand-lizard"></i>
             </button>
-            <button class="choice-btn btn-big" data-type="spock">
+            <button class="choice-btn btn-big" data-type="spock" aria-label="select spock">
                 <i class="fa-solid fa-hand-spock"></i>
             </button>
         </div>
@@ -60,7 +61,10 @@
     </section>
 
     <footer class="footer">
-        <p>All rights reserved <span id="year">2022</span></p>
+        <p> <strong><em>The Rules:</em></strong> Scissors decapitate Scissors cuts paper, paper covers rock, 
+            rock crushes lizard, lizard poisons Spock, Spock smashes scissors, 
+            scissors decapitates lizard, lizard eats paper, paper disproves Spock, 
+            Spock vaporizes rock, and as it always has, rock crushes scissors.</p>
     </footer>   
     <script src="https://kit.fontawesome.com/6711858dc6.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
