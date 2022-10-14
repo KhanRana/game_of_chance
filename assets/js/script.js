@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(){
         })  
     }
 
-    resetScores();
+    resetScores();  //reset the score and winner
 })
 
 /**
