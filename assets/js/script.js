@@ -1,24 +1,24 @@
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 
 document.addEventListener("DOMContentLoaded", function(){
+
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
         button.addEventListener("click", function(){
             let btn = this.getAttribute("data-type");
-            choice(btn, "your-image")[0];
+            choice(btn, "your-image")[0]; //change player image
 
-            let yourChoice = choice(btn, "your-image")[1];
+            let yourChoice = choice(btn, "your-image")[1]; // get player choice
          
-            let ncp = npcChoice(choices);
-            console.log(ncp);
-            choice(ncp, "npc-image")[0];
+            let ncp = npcChoice(choices); //npc choice from the array
+            choice(ncp, "npc-image")[0]; // get npc image
 
-            let myChoice = choice(ncp, "npc-image")[1];
-            console.log(myChoice);
+            let myChoice = choice(ncp, "npc-image")[1]; //get npc choice 
 
-            checkAnswer(yourChoice, myChoice)
+            checkAnswer(yourChoice, myChoice);//check choices and winners           
         })  
-}});
+    }
+})
 
 function choice(btn, id) { 
     let img = document.getElementById(id);
@@ -51,7 +51,7 @@ function checkAnswer(playerChoice, nonPlayer){
     message = ``;
     if (nonPlayer === playerChoice) {
         message = `We both chose ${nonPlayer} - Its a tie`;
-        document.getElementById("winner").textContent = message;
+        document.getElementById("round-winner").textContent = message;
     }
     else if ((nonPlayer === "rock") && (playerChoice === "scissors" || playerChoice === "lizard")
     || ((nonPlayer === "paper") && (playerChoice === "rock" || playerChoice === "spock")) 
@@ -60,14 +60,13 @@ function checkAnswer(playerChoice, nonPlayer){
     || ((nonPlayer === "spock") && (playerChoice === "rock" || playerChoice === "scissors"))) {
 
         message = `I chose ${nonPlayer}, so I win! ${nonPlayer} beats ${playerChoice}`;
-        document.getElementById("winner").textContent = message;
-        incrementNPCScore()
+        document.getElementById("round-winner").textContent = message;
+        incrementNPCScore();
     }
     else {
         message = `I chose ${nonPlayer}, so you win! ${playerChoice} beats ${nonPlayer}`;
-        document.getElementById("winner").textContent = message;
+        document.getElementById("round-winner").textContent = message;
         incrementScore();
-
     }
 }
 

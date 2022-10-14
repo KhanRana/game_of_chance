@@ -124,6 +124,10 @@ button:hover {
     font-size: 1.5rem;
 }
 
+#round-winner {
+    font-size: 1.2rem;
+}
+
 /* footer */
 .footer {
     background-color: rgba(4, 96, 79, 0.906);
