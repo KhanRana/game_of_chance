@@ -33,6 +33,9 @@ This section shows the score of both player fof the game and the user have the o
 This section shows the overall winner of the game based on the games won. It will also show which choice wins each round. For Example, rock beate scissors, paper beats rock, and Lizard beats Spock.
 ![winner](https://github.com/KhanRana/lizard_spock_expansion/blob/main/assets/images/readme-report/winner.png)
 
+### Reset
+The user can reset the game and scores by clicking on the reset button
+
 ### Footer
 The footer shows the rules of the game and would stay on the page at all time should a player want to read or cofirm.
 ![rules of the game](https://github.com/KhanRana/lizard_spock_expansion/blob/main/assets/images/readme-report/footer-rules.png)
