@@ -1,7 +1,13 @@
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", main());
 
+
+
+/**
+ * main function to run when dom is loaded
+ */
+function main (){
     let buttons = document.getElementsByClassName("choice-btn");
     for (let button of buttons) {
         button.addEventListener("click", function () {
@@ -27,7 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     resetScores(); //reset the score and winner
-})
+}
+
 
 /**
  * make a choice and returns image and choice
