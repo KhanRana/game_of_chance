@@ -2,7 +2,7 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    let buttons = document.getElementsByTagName("button");
+    let buttons = document.getElementsByClassName("choice-btn");
     for (let button of buttons) {
         button.addEventListener("click", function () {
             let btn = this.getAttribute("data-type");
