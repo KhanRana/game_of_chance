@@ -7,16 +7,18 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             let btn = this.getAttribute("data-type");
 
-            let playerImage;
-            playerImage = choice(btn, "your-image")[0];
+            let player = choice(btn, "your-image");
+            let playerImage = player[0];
 
-            let yourChoice = choice(btn, "your-image")[1]; // get player choice
+            let yourChoice = player[1]; // get player choice
 
             let ncp = npcChoice(choices); //npc choice from the array
-            let myImage;
-            myImage = choice(ncp, "npc-image")[0]; // get npc image
+            
+            let ncPlayer = choice(ncp, "npc-image");
 
-            let myChoice = choice(ncp, "npc-image")[1]; //get npc choice 
+            myImage = ncPlayer[0]; // get npc image
+
+            let myChoice = ncPlayer[1]; //get npc choice 
             console.log(myChoice);
             checkAnswer(yourChoice, myChoice); //check choices and winners 
 
@@ -61,7 +63,7 @@ function checkAnswer(playerChoice, nonPlayer) {
     if (nonPlayer === playerChoice) {
         message = `We both chose ${nonPlayer} - Its a tie`;
         document.getElementById("round-winner").textContent = message;
-        
+
     } else if (nonPlayer === "rock") {
         if (playerChoice === "scissors" || playerChoice === "lizard") {
             message = `I chose ${nonPlayer}, so I win! ${nonPlayer} beats ${playerChoice}`;
